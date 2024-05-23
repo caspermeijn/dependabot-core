@@ -137,6 +137,7 @@ public partial class DiscoveryWorkerTests : DiscoveryWorkerTestBase
                       </ItemGroup>
                     </Project>
                     """),
+                ("Directory.Build.props", "<Project />"),
                 ("Directory.Packages.props", """
                     <Project>
                       <PropertyGroup>
@@ -153,6 +154,7 @@ public partial class DiscoveryWorkerTests : DiscoveryWorkerTestBase
             expectedResult: new()
             {
                 FilePath = "",
+                ExpectedProjectCount = 2,
                 Projects = [
                     new()
                     {
@@ -205,6 +207,7 @@ public partial class DiscoveryWorkerTests : DiscoveryWorkerTestBase
                       </ItemGroup>
                     </Project>
                     """),
+                ("Directory.Build.props", "<Project />"),
                 ("Directory.Packages.props", """
                     <Project>
                       <PropertyGroup>
@@ -276,6 +279,7 @@ public partial class DiscoveryWorkerTests : DiscoveryWorkerTestBase
             expectedResult: new()
             {
                 FilePath = "",
+                ExpectedProjectCount = 2,
                 Projects = [
                     new()
                     {
